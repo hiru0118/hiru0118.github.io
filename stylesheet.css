@@ -1,78 +1,117 @@
 /* 全体共通 */
 body {
   margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-  line-height: 1.6;
-  background-color: #fdfdfd;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; /* モダンなフォントを追加 */
+  line-height: 1.7; /* 行間を少し広げて読みやすく */
+  background-color: #f4f7f6; /* 少し温かみのある背景色 */
   color: #333;
 }
 
 a {
-  color: #007acc;
+  color: #007bff; /* やや明るめの青に変更 */
   text-decoration: none;
+  transition: color 0.2s ease-in-out; /* ホバーエフェクトを滑らかに */
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #0056b3; /* ホバー時の色を少し濃く */
+  text-decoration: none; /* ホバー時の下線を削除 (お好みで underline も可) */
 }
 
 .container {
   width: 90%;
-  max-width: 900px;
+  max-width: 960px; /* 最大幅を少し広げる */
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 25px 0; /* パディングを少し調整 */
 }
 
 /* ヘッダー */
 header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 15px 0;
+  background-color: #ffffff; /* 白背景に変更 */
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 薄い影を追加 */
+  border-bottom: 1px solid #e0e0e0; /* 細い境界線 */
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px; /* ロゴとタイトルの間隔を調整 */
 }
 
 .logo {
-  width: 80px;       /* 幅を80pxに固定 */
-  height: auto;      /* 縦横比を維持 */
-  border-radius: 8px;
-  object-fit: cover; /* トリミング補助（必要なら） */
+  width: 100px;   /* サイズを少し大きく */
+  height: 100px;  /* サイズを少し大きく */
+  border-radius: 50%; /* 円形にする */
+  object-fit: cover;
+  border: 2px solid #eee; /* 細い枠線を追加 */
 }
 
 .site-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* サイズを少し大きく */
   margin: 0;
+  color: #2c3e50; /* タイトルの色を以前のヘッダー背景色に */
+  font-weight: 600; /* 少し太字に */
+}
+
+/* メインコンテンツ */
+main {
+  padding-top: 20px; /* ヘッダーとの間に少し余白 */
 }
 
 /* セクション */
 section {
-  margin-top: 40px;
+  margin-top: 30px;
+  background-color: #ffffff; /* セクション背景を白に */
+  padding: 30px;             /* 内側のパディングを増やす */
+  border-radius: 8px;        /* 角を丸くする */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* よりはっきりした影 */
+}
+
+section:first-child {
+  margin-top: 0; /* 最初のセクションのマージンは不要 */
 }
 
 section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #2c3e50;
+  font-size: 1.9rem; /* 見出しサイズを調整 */
+  margin-top: 0; /* セクション内での見出し上部マージンをリセット */
+  margin-bottom: 20px; /* 見出しとコンテンツの間のマージンを増やす */
+  color: #343a40; /* 見出しの色を濃いグレーに */
+  padding-bottom: 10px; /* 下線との間に余白 */
+  border-bottom: 2px solid #007bff; /* アクセントカラーの下線 */
+  display: inline-block; /* 下線の幅をテキストに合わせる */
 }
 
 ul {
-  padding-left: 1.2em;
+  padding-left: 1.5em; /* リストのインデントを調整 */
+  list-style-type: disc; /* リストマーカーを標準の円に */
 }
 
 ul li {
-  margin-bottom: 5px;
+  margin-bottom: 8px; /* リストアイテム間の余白を少し増やす */
+  line-height: 1.8; /* リストアイテムの行間も調整 */
 }
+
+.intro p strong {
+  color: #2c3e50; /* 強調テキストの色を調整 */
+}
+
+/* 作品セクションのリンク */
+.works ul li a {
+  font-weight: 500; /* 少し太字に */
+}
+
 
 /* フッター */
 footer {
-  margin-top: 40px;
-  padding: 15px 0;
-  background-color: #ecf0f1;
+  margin-top: 50px; /* フッターの上の余白を増やす */
+  padding: 25px 0;
+  background-color: #343a40; /* ダーク系の背景 */
   text-align: center;
   font-size: 0.9rem;
-  color: #666;
+  color: #f8f9fa; /* 明るい文字色 */
+}
+
+footer p {
+  margin: 0;
 }
